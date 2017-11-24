@@ -54,7 +54,7 @@
                                 <form action="#" class="search_form" id="formBuscar">
                                     <input type="button" value="Iniciar Sesión" class="btn btn-primary">
                                     <input type="text" placeholder="Text to Search" id="textoInput">
-                                    <input type="submit" value="">
+                                    <input type="submit" value="" onclick="clicBuscar();">
                                 </form>
                             </div>
                         </div>
@@ -552,6 +552,14 @@
                 'action': 'Click Menu',
                 'label': p.value
             }
+            )
+        }
+        function clicBuscar() {
+            dataLayer.push(
+                'event': 'virtualBuscar',
+                'category': 'Home',
+                'action': 'Buscar en la web',
+                'label': 'keywords: ' + textoInput.value
             )
         }
         </script>
