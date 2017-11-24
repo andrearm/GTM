@@ -60,7 +60,7 @@
                         </div>
                         <div class="header_bottom">
                             <div class="header_bottom_left"><a class="logo" href="index.html">Capacitaciones</a></div>
-                            <div class="header_bottom_right"><a href="#"><img src="images/addbanner_728x90_V1.jpg" alt=""></a></div>
+                            <div class="header_bottom_right"><a href="#" onclick="promotionClick();"><img src="images/addbanner_728x90_V1.jpg" alt=""></a></div>
                         </div>
                     </div>
                 </div>
@@ -563,6 +563,21 @@
                 'label': 'keywords: ' + document.getElementById('textoInput').value
             }
             )
+        }
+        function promotionClick() {
+            dataLayer.push({
+            'event':'promotionClick',
+            'ecommerce': {
+              'promoClick': {
+                'promotions': [
+                {'id': '12345',
+                'name': 'Site Templates and Banners for $3',
+                'position': 'Anuncio Superior',
+                'creative': 'http://templates-prueba.com/'}
+              ]
+              }
+            }
+          });
         }
         </script>
         <script>
