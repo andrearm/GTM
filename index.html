@@ -60,7 +60,7 @@
                         </div>
                         <div class="header_bottom">
                             <div class="header_bottom_left"><a class="logo" href="index.html">Capacitaciones</a></div>
-                            <div class="header_bottom_right"><a href="#" onclick="promotionClick();"><img src="images/addbanner_728x90_V1.jpg" alt=""></a></div>
+                            <div class="header_bottom_right"><a href="#" onclick="promotionClick('12345', 'AnuncioSuperior');"><img src="images/addbanner_728x90_V1.jpg" alt=""></a></div>
                         </div>
                     </div>
                 </div>
@@ -115,16 +115,16 @@
                             <div class="content_top_right">
                                 <ul class="featured_nav wow fadeInDown">
                                     <li><img src="images/300x215x1.jpg" alt="">
-                                        <div class="title_caption"><a href="pages/single.html">Sed luctus semper odio aliquam rhoncus</a></div>
+                                        <div class="title_caption"><a href="pages/single.html" onclick="promotionClick('1', 'Position 1');" >Sed luctus semper odio aliquam rhoncus</a></div>
                                     </li>
                                     <li><img src="images/300x215x2.jpg" alt="">
-                                        <div class="title_caption"><a href="pages/single.html">Sed luctus semper odio aliquam rhoncus</a></div>
+                                        <div class="title_caption"><a href="pages/single.html" onclick="promotionClick('2', 'Position 2');">Sed luctus semper odio aliquam rhoncus</a></div>
                                     </li>
                                     <li><img src="images/300x215x3.jpg" alt="">
-                                        <div class="title_caption"><a href="pages/single.html">Sed luctus semper odio aliquam rhoncus</a></div>
+                                        <div class="title_caption"><a href="pages/single.html" onclick="promotionClick('3', , 'Position 3');">Sed luctus semper odio aliquam rhoncus</a></div>
                                     </li>
                                     <li><img src="images/300x215x4.jpg" alt="">
-                                        <div class="title_caption"><a href="pages/single.html">Sed luctus semper odio aliquam rhoncus</a></div>
+                                        <div class="title_caption"><a href="pages/single.html" onclick="promotionClick('4', , 'Position 4');">Sed luctus semper odio aliquam rhoncus</a></div>
                                     </li>
                                 </ul>
                             </div>
@@ -564,15 +564,15 @@
             }
             )
         }
-        function promotionClick() {
+        function promotionClick(e, d) {
             dataLayer.push({
             'event':'promotionClick',
             'ecommerce': {
               'promoClick': {
                 'promotions': [
-                {'id': '12345',
+                {'id': e,
                 'name': 'Site Templates and Banners for $3',
-                'position': 'Anuncio Superior',
+                'position': d,
                 'creative': 'http://templates-prueba.com/'}
               ]
               }
