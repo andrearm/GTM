@@ -556,10 +556,12 @@
         }
         function clicBuscar() {
             dataLayer.push(
+            {
                 'event': 'virtualBuscar',
                 'category': 'Home',
                 'action': 'Buscar en la web',
                 'label': 'keywords: ' + document.getElementById(textoInput).value
+            }
             )
         }
         </script>
